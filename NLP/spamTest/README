@@ -1,0 +1,18 @@
+    Under the directory enron1, there is directory for ham-mail and spam-mail respectively
+
+    The .py file getWordVect serve as a converter which change the mail from text to vector represented by how many times
+does the word inside words_bag appear in the mail
+    What getWordVect did is 3 things:
+        1.Read files from enron1/ham or enron1/spam, and get 40 mails each from ham and spam for training
+        and 10 mails each for testing
+        2.Get words_bag from training set, which contain a set of all the words from the training set
+        3.Change the training set's mail into vector, for each one we will check how many time, does the word inside
+        words_bag appear in certain mail, and then mark the ham-mails with label 1 at the back, 0 for the spam-mail
+        4.Write the train vector for ham and spam into word_vec_train.txt, and into word_vec_test for test set
+
+    After the pre-processing we load the vector with numpy.loadtext(). I got the data assigned to X and label assigned to
+y then. Also, I did the same thing with the test set and put the data and label in tX, ty respectively. With the help of
+sklearn's machine learning function, i try svm, logistical regression and native byes in test.py and testAlgorithmn.py both
+of witch have good performance.
+
+
